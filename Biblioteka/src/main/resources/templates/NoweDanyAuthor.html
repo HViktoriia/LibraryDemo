@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pl">
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="http://localhost:8080/main">Main</a> </li>
+        <li><a href="http://localhost:8080/add">Add</a></li>
+        <li><a href="http://localhost:8080/delete">Delete</a></li>
+        <li><a href="http://localhost:8080/update">Update</a></li>
+        <li><a href="http://localhost:8080/find">Find</a></li>
+    </ul>
+</header>
+Dodałeś następujące dane:
+<br>
+<span th:text=${author}>...</span><br>
+</body>
+</html>

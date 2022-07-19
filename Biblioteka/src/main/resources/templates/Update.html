@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aktualizuj</title>
+    </head>
+<body>
+<form   th:action="@{/updatebook}" th:object="${book}">
+    <header>
+        <ul>
+            <li><a href="http://localhost:8080/main">Main</a> </li>
+            <li><a href="http://localhost:8080/add">Add</a></li>
+            <li><a href="http://localhost:8080/delete">Delete</a></li>
+            <li><a href="http://localhost:8080/update">Update</a></li>
+            <li><a href="http://localhost:8080/find">Find</a></li>
+        </ul>
+    </header>
+    <table>
+        <tr>
+            <td>Podaj nazwę </td>
+            <td><input name="Nazwa" th:field="*{Nazwa}"> </td>
+        </tr>
+        <tr>
+            <td>Podaj kategorie</td>
+            <td> <input name="Kategoria" th:field="*{Kategoria}"> </td>
+        </tr>
+        <tr>
+            <td>    Podaj wydawcę</td>
+            <td><input name="Wydawca" th:field="*{Wydawca}"></td>
+        </tr>
+        <tr>
+            <td>     Podaj ilość stron    </td>
+            <td><input name="IloscStron" th:field="*{IloscStron}"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit"></td>
+    </table>
+</form>
+</body>
+</html>

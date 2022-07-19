@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+<body>
+<!--<form action="/wyswietli" method="post">-->
+
+  <p align="center"> <h2>Bibloiteka (Książki)</h2></p> <br>
+
+  <table  class="table table-striped">
+    <tr><th>Nazwa książki</th><th>Kategoria</th><th>Wydawca</th><th>Ilość stron</th><th>Author</th>kasuj ?</th><th>aktualizuj</th></tr>
+
+    <tr  th:each="wpis: ${book}"> <td th:text="${wpis.nazwa}">Nazwa książki</td>
+      <td th:text="${wpis.kategoria}">Kategoria</td>
+      <td th:text="${wpis.wydawca}">Wydawca</td>
+      <td th:text="${wpis.iloscstron}">IloscStron</td>
+<!--      <td th:text="${wpis.author}">Author</td>-->
+
+
+      <td>
+        <a href="#" th:href="@{/kasuj(id=${wpis.id})}" class="btn btn-danger">
+
+          <i class="fa fa-trash-o fa-lg"></i>Kasuj</a></td>
+
+
+      <td>
+        <a href="#" th:href="@{/update(id=${wpis.id})}" class="btn btn-primary">
+
+          <i class="fa fa-trash-o fa-lg"></i>Aktualizuj</a></td>
+
+    </tr>
+
+  </table>
+
+< <table class="table table-striped">
+    <tr><td> Wyszukaj wg nazwę</td><td><form action="http://localhost:8080/findbook"><input name="kryterium"></td><td><input type="submit"></form></td></tr>
+
+</table>
+
+</form>
+</body>
+</html>
